@@ -1,0 +1,33 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+*.env
+
+# Test execution artifacts
+logs/
+screenshots/
+allure-results/
+downloads/
+test_files/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-*
+.DS_Store
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
