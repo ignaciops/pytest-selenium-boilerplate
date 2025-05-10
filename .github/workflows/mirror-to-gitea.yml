@@ -1,0 +1,17 @@
+name: Mirror to Gitea
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Push to Gitea
+        run: | 
+          git remote add gitea https://ignacio:${{ secrets.GITEA_TOKEN }}@git.ignaciops.dev/ignacio/pytest-selenium-boilerplate.git
+          git push gitea main
